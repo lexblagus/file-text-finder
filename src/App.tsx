@@ -1,3 +1,4 @@
+import '@fontsource/ibm-plex-sans/index.css';
 import './App.css'
 
 function App() {
