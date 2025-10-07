@@ -26,6 +26,22 @@
     var(--paper-shadow-spread-disperse) var(--paper-shadow-color-disperse);
   --paper-shadow: var(--paper-shadow-edge), var(--paper-shadow-disperse);
 
+  --textfield-shadow-blur-edge: 3px;
+  --textfield-shadow-spread-edge: 1px;
+  --textfield-shadow-color-edge: hsla(240, 100%, 50%, 0.5);
+  --textfield-shadow-edge: 0 0 var(--textfield-shadow-blur-edge)
+    var(--textfield-shadow-spread-edge) var(--textfield-shadow-color-edge);
+
+  --textfield-shadow-blur-disperse: 20px;
+  --textfield-shadow-spread-disperse: 0px;
+  --textfield-shadow-color-disperse: hsla(240, 100%, 50%, 0.25);
+  --textfield-shadow-disperse: 0 0 var(--textfield-shadow-blur-disperse)
+    var(--textfield-shadow-spread-disperse)
+    var(--textfield-shadow-color-disperse);
+
+  --textfield-shadow: var(--box-shadow-input-concave),
+    var(--textfield-shadow-edge), var(--textfield-shadow-disperse);
+
   --hightlight-foreground-color: var(--paper-foreground-color);
   --hightlight-background-color: hsla(60, 100%, 50%, 0.15);
   --hightlight-border-color: hsla(60, 100%, 50%, 0.15);
@@ -36,6 +52,10 @@
     --paper-foreground-color: hsl(0, 0%, 70%);
     --paper-background-color: hsl(0, 0%, 12.5%);
     --paper-border-color: hsl(0, 0%, 5%);
+
+    --textfield-shadow-color-edge: hsla(240, 100%, 75%, 0.5);
+    --textfield-shadow-color-disperse: hsla(240, 100%, 75%, 0.25);
+
     --hightlight-shadow: 1px 1px 1px 1px hsla(0, 100%, 0%, 0.75);
   }
 }
@@ -57,9 +77,13 @@
   padding: var(--find-area-padding);
 }
 
-.inputFind {
+input.inputFind {
   font-size: var(--font-size-large);
   text-align: center;
+}
+
+input.inputFind:focus-visible {
+  box-shadow: var(--textfield-shadow);
 }
 
 .document {

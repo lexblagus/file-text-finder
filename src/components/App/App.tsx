@@ -16,7 +16,7 @@ function App() {
 
   return (
     <section className="wrapper">
-      <header>Text Finder</header>
+      <header>File Text Finder</header>
       <main>{contents ? <Finder contents={contents} /> : <Uploader onLoaded={onLoaded} />}</main>
       <footer>
         <small>
@@ -24,7 +24,7 @@ function App() {
           it is not intended for production use and must not be used for
           commercial purposes. No warranties or guarantees of any kind are
           provided. By <a href="https://blag.us/">Lexa</a> (
-          <a href="https://github.com/lexblagus/…">source</a>)
+          <a href="https://github.com/lexblagus/file-text-finder">source</a>)
         </small>
       </footer>
     </section>

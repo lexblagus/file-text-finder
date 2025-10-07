@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import type { FC, KeyboardEventHandler } from "react";
 import "./Finder.css";
 
@@ -19,9 +19,11 @@ const Finder: FC<{
   contents: string;
 }> = ({ contents }) => {
   const [tokens, setTokens] = useState<Token[]>([]);
+  const inputRef = useRef<HTMLInputElement>(null); 
 
   useEffect(() => {
     setTokens([{ text: contents, hightlight: false }]);
+    inputRef.current?.focus();
   }, []);
 
   const onKeyUp: KeyboardEventHandler<HTMLInputElement> = (event) => {
@@ -42,6 +44,7 @@ const Finder: FC<{
     <div className="finder">
       <div className="find">
         <input
+          ref={inputRef}
           className="inputFind"
           placeholder="find in text…"
           onKeyUp={onKeyUp}

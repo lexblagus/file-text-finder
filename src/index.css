@@ -81,9 +81,10 @@ p {
 
 #root {
   display: flex;
-  align-content: center;
+  /* align-content: center; */
   justify-content: center;
   flex-wrap: wrap;
+  flex-direction: column;
 }
 
 a,
@@ -134,6 +135,11 @@ input {
   box-shadow: var(--box-shadow-input-concave);
   background-color: var(--textarea-background-color);
   color: var(--input-text-color);
+}
+
+input:not([type]):focus-visible,
+input[type="text"]:focus-visible {
+  outline: none;
 }
 
 input[type="checkbox"] {

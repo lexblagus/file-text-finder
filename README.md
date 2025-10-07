@@ -1,4 +1,4 @@
-# Text Finder
+# File Text Finder
 
 ## Requirements
 
@@ -9,7 +9,7 @@
 - A small PoC with the features that you described;
 - Free time box;
 - Brief explanation of all the features that you listed what you can’t implement;
-  - In _Features_ section bellow.
+  - In _Aditional features_ section bellow.
 - Github repository with a step-by-step explanation of how to run the app and any services we need to set up;
 - You can use AI for the coding but NOT the writing part.
 
@@ -31,10 +31,11 @@ Clone the repo and…
 - ☑ Check type and size
 - ☑ Search for content inside them
 
-## Future features
+## Aditional features
 
+- ☑ Case insensitive search
+- ☑ Dark and light color schemes
 - ☐ Test pyramid: unitary and e2e
-- ☐ Better upload field aesthetic;
 - ☐ Better file type detection (e.g.: .log);
 - ☐ Cancel button on "your file here" when a file has been previuslly loaded;
 - ☐ Load another file button so you don't need to refresh
@@ -42,6 +43,12 @@ Clone the repo and…
 - ☐ Internationalization
 - ☐ Debounce onKeyUp
 - ☐ Optional: search using regular expression
+
+## Links
+
+[Source code on GitHub](https://github.com/lexblagus/file-text-finder)
+
+[Live application](https://tools.blag.us/file-text-finder)
 
 # Disclaimer
 
