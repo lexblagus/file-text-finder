@@ -11,7 +11,7 @@ const escapeRegex = (str: string): string =>
   str.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 
 const splitKeep = (text: string, splitter: string): string[] => {
-  const pattern = new RegExp(`(${escapeRegex(splitter)})`, "g");
+  const pattern = new RegExp(`(${escapeRegex(splitter)})`, "gi");
   return text.split(pattern);
 };
 
@@ -33,7 +33,7 @@ const Finder: FC<{
     setTokens(
       splitKeep(contents, find).map((part) => ({
         text: part,
-        hightlight: part === find,
+        hightlight: part.toLowerCase() === find.toLowerCase(),
       }))
     );
   };

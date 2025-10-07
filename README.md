@@ -1,37 +1,35 @@
-# Sierra Studio Take-Home Challenge
+# Text Finder
 
 ## Requirements
 
 - Upload files;
 - Search for content inside them;
 - Reasons why you believe those would make the best experience possible;
+  - Simple and straightforward: upload your file and make your search.
 - A small PoC with the features that you described;
 - Free time box;
 - Brief explanation of all the features that you listed what you can’t implement;
+  - In _Features_ section bellow.
 - Github repository with a step-by-step explanation of how to run the app and any services we need to set up;
 - You can use AI for the coding but NOT the writing part.
 
-## Planning
-
-(handwritten draft photo)
-
 ## Screenshot
 
-(image)
+![screenshot](./media/screenshot.png)
 
 ## Install and use
 
-- nvm use
-- npm install
-- …
+Clone the repo and…
+
+- If you use NVM: `nvm use`
+- `npm install`
+- `npm run dev`
 
 ## Features
 
 - ☑ Upload files
 - ☑ Check type and size
-- ☐ Search for content inside them
-- ☐ previus / Next results
-- ☐ …
+- ☑ Search for content inside them
 
 ## Future features
 
