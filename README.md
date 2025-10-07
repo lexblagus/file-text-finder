@@ -2,13 +2,13 @@
 
 ## Requirements
 
-- Upload files
-- Search for content inside them
-- Reasons why you believe those would make the best experience possible
-- A small PoC with the features that you described
-- Free time box
-- brief explanation of all the features that you listed what you can’t implement
-- Github repository with a step-by-step explanation of how to run the app and any services we need to set up.
+- Upload files;
+- Search for content inside them;
+- Reasons why you believe those would make the best experience possible;
+- A small PoC with the features that you described;
+- Free time box;
+- Brief explanation of all the features that you listed what you can’t implement;
+- Github repository with a step-by-step explanation of how to run the app and any services we need to set up;
 - You can use AI for the coding but NOT the writing part.
 
 ## Planning
@@ -19,7 +19,6 @@
 
 (image)
 
-
 ## Install and use
 
 - nvm use
@@ -29,11 +28,22 @@
 ## Features
 
 - ☑ Upload files
-- ☐ Check malicious contents
+- ☑ Check type and size
 - ☐ Search for content inside them
 - ☐ previus / Next results
-- ☐ Saving in the bakend
 - ☐ …
+
+## Future features
+
+- ☐ Test pyramid: unitary and e2e
+- ☐ Better upload field aesthetic;
+- ☐ Better file type detection (e.g.: .log);
+- ☐ Cancel button on "your file here" when a file has been previuslly loaded;
+- ☐ Load another file button so you don't need to refresh
+- ☐ Acessibility with aria attributes on message divs
+- ☐ Internationalization
+- ☐ Debounce onKeyUp
+- ☐ Optional: search using regular expression
 
 # Disclaimer
 

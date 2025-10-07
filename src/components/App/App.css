@@ -1,0 +1,67 @@
+/* -------------------------------------------------------------------------- */
+/* Configuration */
+/* -------------------------------------------------------------------------- */
+:root {
+  --peripheral-background-color: hsl(0, 0%, 80%);
+
+  --wrapper-shadow-blur-edge: 3px;
+  --wrapper-shadow-spread-edge: 0px;
+  --wrapper-shadow-color-edge: hsl(0, 0%, 0%, 1);
+  
+  --wrapper-shadow-blur-disperse: 10px;
+  --wrapper-shadow-spread-disperse: 0px;
+  --wrapper-shadow-color-disperse: hsl(0, 0%, 0%, 1);
+
+  --wrapper-shadow-edge: 0 0 var(--wrapper-shadow-blur-edge) var(--wrapper-shadow-spread-edge) var(--wrapper-shadow-color-edge);
+  --wrapper-shadow-disperse: 0 0 var(--wrapper-shadow-blur-disperse) var(--wrapper-shadow-spread-disperse) var(--wrapper-shadow-color-disperse);
+  --wrapper-shadow: var(--wrapper-shadow-edge), var(--wrapper-shadow-disperse);
+
+  @media (prefers-color-scheme: dark) {
+    --peripheral-background-color: hsl(0, 0%, 10%);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Element styles */
+/* -------------------------------------------------------------------------- */
+body {
+  font-family: "IBM Plex Sans", system-ui;
+}
+
+section {
+  display: grid;
+  height: 100%;
+  grid-template-rows: auto 1fr auto;
+}
+
+section.wrapper > header,
+section.wrapper > main,
+section.wrapper > footer {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-content: center;
+}
+
+section.wrapper > header,
+section.wrapper > footer {
+  background-color: var(--peripheral-background-color);
+  box-shadow: var(--wrapper-shadow);
+  padding: var(--spacing);
+  justify-content: center;
+}
+
+section.wrapper > header {
+  font-weight: 100;
+  text-transform: uppercase;
+  font-size: var(--font-size-huge);
+}
+
+section.wrapper > main {
+  justify-content: flex-start;
+  overflow: auto;
+}
+
+section.wrapper > footer {
+  text-align: center;
+}

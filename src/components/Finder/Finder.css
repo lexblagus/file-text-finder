@@ -1,0 +1,90 @@
+/* -------------------------------------------------------------------------- */
+/* Configuration */
+/* -------------------------------------------------------------------------- */
+:root {
+  --find-area-padding: 20px;
+
+  --paper-background-color: hsl(0, 0%, 85%);
+  --paper-foreground-color: hsl(0, 0%, 20%);
+  --paper-border-color: hsl(0, 0%, 50%);
+  --paper-border-width: 1px;
+  --paper-border-radius: 2px;
+  --paper-x-margin: 20px;
+  --paper-padding: 20px;
+
+  --paper-shadow-blur-edge: 2px;
+  --paper-shadow-spread-edge: 0px;
+  --paper-shadow-color-edge: hsl(0, 0%, 0%, 0.5);
+
+  --paper-shadow-blur-disperse: 10px;
+  --paper-shadow-spread-disperse: 0px;
+  --paper-shadow-color-disperse: hsl(0, 0%, 0%, 0.25);
+
+  --paper-shadow-edge: 0 0 var(--paper-shadow-blur-edge)
+    var(--paper-shadow-spread-edge) var(--paper-shadow-color-edge);
+  --paper-shadow-disperse: 0 0 var(--paper-shadow-blur-disperse)
+    var(--paper-shadow-spread-disperse) var(--paper-shadow-color-disperse);
+  --paper-shadow: var(--paper-shadow-edge), var(--paper-shadow-disperse);
+
+  --hightlight-foreground-color: var(--paper-foreground-color);
+  --hightlight-background-color: hsla(60, 100%, 50%, 0.15);
+  --hightlight-border-color: hsla(60, 100%, 50%, 0.15);
+  --hightlight-shadow: 1px 1px 1px 1px hsla(0, 100%, 0%, 0.5);
+  --hightlight-border-radius: 5px;
+
+  @media (prefers-color-scheme: dark) {
+    --paper-foreground-color: hsl(0, 0%, 70%);
+    --paper-background-color: hsl(0, 0%, 12.5%);
+    --paper-border-color: hsl(0, 0%, 5%);
+    --hightlight-shadow: 1px 1px 1px 1px hsla(0, 100%, 0%, 0.75);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Element styles */
+/* -------------------------------------------------------------------------- */
+.finder {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  align-content: center;
+  flex-grow: 1;
+}
+
+.find {
+  padding: var(--find-area-padding);
+}
+
+.inputFind {
+  font-size: var(--font-size-large);
+  text-align: center;
+}
+
+.document {
+  display: inline-block;
+  flex-grow: 1;
+  margin: 0 var(--paper-x-margin) 0;
+  padding: var(--paper-padding);
+
+  border-style: solid solid none solid;
+  border-width: var(--paper-border-width);
+  border-color: var(--paper-border-color);
+  border-radius: var(--paper-border-radius) var(--paper-border-radius) 0 0;
+
+  box-shadow: var(--paper-shadow);
+  background-color: var(--paper-background-color);
+  color: var(--paper-foreground-color);
+
+  font-family: var(--font-family-monospace);
+  white-space: pre-wrap;
+}
+
+.hightlight {
+  background-color: var(--hightlight-background-color);
+  color: var(--hightlight-foreground-color);
+  border: 1px solid var(--hightlight-border-color);
+  box-shadow: var(--hightlight-shadow);
+  border-radius: var(--hightlight-border-radius);
+}

@@ -7,6 +7,7 @@
   --text-link-visited: hsl(270, 44%, 38%);
   --text-link-active: hsl(240, 100%, 80%);
   --background-color: hsl(0, 0%, 90%);
+  --input-text-color: hsl(0, 0%, 0%);
   --button-text-color: hsla(0, 0%, 20%, 1);
   --button-background-color: hsla(0, 0%, 80%, 1);
   --textarea-background-color: hsla(0, 0%, 0%, 0.15);
@@ -17,12 +18,15 @@
 
   --font-family: system-ui, sans-serif;
   --font-family-monospace: monospace;
-  --font-size-small: 0.8em;
+  --font-size--default: 16px;
+  --font-size-small: 0.75rem;
+  --font-size-large: 1.25rem;
+  --font-size-huge: 2rem;
 
-  --box-shadow-input-concave: inset 2px 2px 2px 0px hsla(0, 0%, 0%, 0.5),
-    inset -1px -1px 2px 0px hsla(0, 0%, 0%, 0.25);
-  --box-shadow-input-convex: 1px 1px 1px 0px hsla(0, 0%, 0%, 0.75),
-    2px 2px 2px 0px hsla(0, 0%, 0%, 0.25);
+  --box-shadow-input-concave: inset 2px 2px 2px 0 hsla(0, 0%, 0%, 0.5),
+    inset -1px -1px 2px 0 hsla(0, 0%, 0%, 0.25);
+  --box-shadow-input-convex: 1px 1px 1px 0 hsla(0, 0%, 0%, 0.75),
+    2px 2px 2px 0 hsla(0, 0%, 0%, 0.25);
 
   --element-min-height: 10em;
 }
@@ -33,7 +37,8 @@
     --text-link: hsl(210, 72%, 56%);
     --text-link-visited: hsl(270, 29%, 53%);
     --text-link-active: hsl(240, 100%, 80%);
-    --background-color: hsl(0, 0%, 25%);
+    --background-color: hsl(0, 0%, 15%);
+    --input-text-color: hsl(0, 0%, 60%);
     --button-text-color: hsla(0, 0%, 0%, 1);
     --button-background-color: hsla(0, 0%, 35%, 1);
   }
@@ -58,6 +63,7 @@ body {
 
 body {
   font-family: var(--font-family);
+  font-size: var(--font-size--default);
   color: var(--text-color);
   background-color: var(--background-color);
 }
@@ -105,6 +111,10 @@ a:hover {
   text-decoration: underline;
 }
 
+small {
+  font-size: var(--font-size-small);
+}
+
 button {
   color: var(--button-text-color);
   box-shadow: var(--box-shadow-input-convex);
@@ -114,6 +124,16 @@ button {
   border-style: solid;
   border-radius: 3px;
   font-weight: bold;
+}
+
+input {
+  border-color: var(--button-border-color);
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 3px;
+  box-shadow: var(--box-shadow-input-concave);
+  background-color: var(--textarea-background-color);
+  color: var(--input-text-color);
 }
 
 input[type="checkbox"] {

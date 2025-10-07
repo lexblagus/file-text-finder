@@ -1,0 +1,50 @@
+/* -------------------------------------------------------------------------- */
+/* Configuration */
+/* -------------------------------------------------------------------------- */
+:root {
+  --upload-area-padding: 50px;
+  --upload-area-border-radius: 10px;
+
+  --upload-background-color: hsla(240, 100%, 50%, 0.1);
+  --upload-border-color: hsla(240, 50%, 50%, 0.5);
+  --upload-border-width: 2px;
+
+  --error-foreground-color: hsl(0, 100%, 50%);
+  --success-foreground-color: hsl(120, 50%, 40%);
+
+  @media (prefers-color-scheme: dark) {
+    --success-foreground-color: hsl(120, 50%, 50%);
+  }
+}
+
+/* -------------------------------------------------------------------------- */
+/* Element styles */
+/* -------------------------------------------------------------------------- */
+.upload {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  flex-grow: 1;
+}
+
+.upload label {
+  padding: var(--upload-area-padding);
+  border-radius: var(--upload-area-border-radius);
+}
+
+.upload label:hover {
+  background-color: var(--upload-background-color);
+  border: dashed var(--upload-border-width) var(--upload-border-color);
+}
+
+.upload input[type="file"] {
+  display: none;
+}
+
+.success {
+  color: var(--success-foreground-color);
+}
+.error {
+  color: var(--error-foreground-color);
+}
